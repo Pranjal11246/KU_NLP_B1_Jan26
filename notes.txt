@@ -101,3 +101,54 @@ I am from France and I speak fluent ______
 
 - That's why we need Memory
 = So we need RNN 
+
+
+RNN - Recurrent Neural Network
+Pre-requisite:
+1. NLP
+2. ANN
+
+Ex: I did not like this movie
+
+Step-1: Initialize Memory
+memory = empty
+This memory is called hidden state
+
+Step-2: Read first word
+Input - "I"
+Updates memory
+memory = understanding of "I"
+
+Step-3: Read next word
+Input - "did"
+Now RNN has:
+- previous memory = "I"
+- current word = "did"
+
+memory = understanding of "I did"
+
+Step-4: Read next word:
+Input - "not"
+previous memory = "I did"
+current word = "not"
+new memory = "I did not"
+
+
+Step-4: Read next word:
+Input - "like"
+previous memory = "I did not"
+current word = "like" - positive sentiment
+new memory = "I did not like"
+
+But memory contains "not"
+memory = negative sentiment
+
+Algorithm of RNN:
+1. Start with empty memory
+2. For each word in the sentence:
+- Read the word
+- Combine it with previous Memory
+- update the memory
+3. After last word:
+- Use memory to make prediction
+
