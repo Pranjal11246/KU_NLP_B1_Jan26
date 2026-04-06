@@ -208,3 +208,43 @@ What LSTM does:
 - What to output
 
 
+Three gates of LSTM:
+1. Forget gate: decides what to forget from the memory
+2. Input gate: decides what to store in memory
+3. Output gate: decides what to predict or output memory
+
+Example: "I went to the movie yesterday...the movie was amazing"
+Word -> "yesterday" -> may not matter -> forget
+
+Word -> "amazing" -> important sentiment -> input
+
+
+Sentence- "I did not like the movie"
+Step by Step LSTM Algorithm
+1. Init memory
+memory = empty
+
+2. Read first word 
+"I" -> Not important -> weak memory
+
+3. Read next word
+"did" -> memory updated slightly
+
+4. Read next word
+"not" -> Input gate -> store "not"
+
+5. Read next word
+"like" -> positive
+"not" -> negative
+
+LSTM combines - final outcome - negative
+
+Internal flow
+At each word:
+1. decides what to forget
+2. decides what to remember
+3. update memory
+4. decides output
+
+
+
